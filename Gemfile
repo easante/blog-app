@@ -49,3 +49,7 @@ end
 group :test do
   gem 'capybara', '~>2.4.4'
 end
+
+group :development do
+  gem 'guard-rspec', require: false
+end
