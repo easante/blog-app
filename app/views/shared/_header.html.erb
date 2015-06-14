@@ -15,7 +15,7 @@
           <li class="active"><%= link_to "Articles", articles_path %></li>
 
           <% if user_signed_in? %>
-          <li><%#= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
             <div class="navbar-right">
               <p class="navbar-text">
                 Signed in as <%= "#{current_user.email}" %>
