@@ -25,6 +25,10 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    if @article.user != current_user
+      flash[:danger] = "You can only edit your own article."
+      redirect_to root_path
+    end
   end
 
   def update
