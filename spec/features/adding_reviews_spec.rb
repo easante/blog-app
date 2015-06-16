@@ -21,7 +21,6 @@ RSpec.feature "Adding Reviews to Articles" do
 
     expect(page).to have_content("Comment has been created")
     expect(page).to have_content("An awesome article")
-    expect(page).to have_content(@article.comments.last.created_at)
     expect(current_path).to eq(article_path(@article.comments.last.id))
   end
 

@@ -6,11 +6,10 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:success] = "Comment has been created"
-      redirect_to @article
     else
       flash.now[:danger] = "Comment has not been created"
-      render @article
     end
+    redirect_to article_path(@article)
   end
 
 private
