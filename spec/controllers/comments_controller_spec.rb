@@ -8,7 +8,7 @@ RSpec.describe CommentsController, type: :controller do
     end
 
     context "signed in user" do
-      it "renders the edit template" do
+      it "can create a comment" do
         login_user @john
 
         article = Article.create(title: "First Article",
@@ -20,7 +20,7 @@ RSpec.describe CommentsController, type: :controller do
     end
 
     context "non-signed in user" do
-      it "renders the edit template" do
+      it "is redirected to the sign in page" do
         login_user nil
 
         article = Article.create(title: "First Article",
